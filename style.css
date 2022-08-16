@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-one: hsl(193, 38%, 86%);
+  --primary-two: hsl(150, 100%, 66%);
+  --neutral-light: hsl(217, 19%, 30%);
+  --neutral-medium: hsl(217, 23%, 23%);
+  --neutral-dark: hsl(218, 23%, 16%);
+  --font-size: 28px;
+}
+
+html,
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: var(--font-size);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--neutral-medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: max-content;
+}
+
+/* Card */
+.advice__card {
+  width: 90%;
+  max-width: 500px;
+  background-color: var(--neutral-light);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0.5rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.advice__number {
+  color: var(--primary-two);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.advice__text {
+  color: var(--primary-one);
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.divider {
+  color: var(--primary-one);
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
+  background-image: url("images/pattern-divider-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 90%;
+}
+
+.advice__button {
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  bottom: -0.5rem;
+  transform: translateX(-50%);
+  background-color: var(--primary-two);
+}
+
+.advice__new {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: -0.5rem;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.dice__background {
+  position: absolute;
+  top: -0.77rem;
+  left: -0.8rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--primary-two);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.advice__new:hover,
+.advice__new:focus {
+  box-shadow: 0 0 60px 20px var(--primary-two);
+}
+
+.advice__new:active {
+  box-shadow: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  .advice__text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .divider {
+    background: url("images/pattern-divider-desktop.svg") no-repeat contain;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
